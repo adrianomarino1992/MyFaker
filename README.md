@@ -55,7 +55,7 @@ public class FakerUser : Faker<User>
 
 ```
 
-**We can add before and after delegates to all methods in a object:**
+**We can create new fake instances of object:**
 ```csharp
            
            List<User> fakeUsers = new FakerUser().Get(10) // will create 10 instances of User
