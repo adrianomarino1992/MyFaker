@@ -8,20 +8,25 @@
             _random = new Random();
         }
 
-        public object GetPositive(int decimals = 0)
+        public object GetNextInt(int min = 0 , int max = int.MaxValue)
         {
-            if (decimals == 0)
-                return _random.Next(0, int.MaxValue);
-
-            return Math.Round(_random.NextDouble() * 10, decimals);
+            return _random.Next(min, max);
         }
 
-        public object GetNegative(int decimals = 0)
+        public object GetPositive(int min = 0, int max = int.MaxValue, int decimals = 0)
         {
             if (decimals == 0)
-                return _random.Next(int.MinValue, -1);
+                return _random.Next(min, max);
 
-            return Math.Round(_random.NextDouble() * -10, decimals);
+            return Math.Round(_random.Next(min, (int)(max / 1.13)) * 1.12, decimals);
+        }
+
+        public object GetNegative(int min = 0, int max = int.MaxValue, int decimals = 0)
+        {
+            if (decimals == 0)
+                return _random.Next(min, max);
+
+            return Math.Round(_random.Next(min, (int)(max / 1.13)) * -1.12, decimals);
         }
 
         public object Get(int decimals = 0)

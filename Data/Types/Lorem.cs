@@ -20,7 +20,17 @@
 
             for (int i = 0; i < qtd; i++)
             {
-                a[i] = _data[_random.Next(0, _data.Length - 1)];
+                string v = _data[_random.Next(0, _data.Length - 1)];
+
+                if (i == 0)
+                {
+                    a[i] = v.Substring(0,1).ToUpper() + v.Substring(1);
+                }
+                else
+                {
+                    a[i] = v.ToLower();
+                }
+                
             }
 
             return String.Join(" ", a);
