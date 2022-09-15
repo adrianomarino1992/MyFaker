@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFaker", "MyFaker.csproj", "{B7E961D5-3AEB-4C48-ACF6-72A738581C6D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F17266F1-84AF-433A-8F55-CD88A03D8F50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFaker.Tests", "Tests\MyFaker.Tests\MyFaker.Tests.csproj", "{18CC34E8-9DF2-442D-957E-D7E0AB795B29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,12 @@ Global
 		{B7E961D5-3AEB-4C48-ACF6-72A738581C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7E961D5-3AEB-4C48-ACF6-72A738581C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7E961D5-3AEB-4C48-ACF6-72A738581C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18CC34E8-9DF2-442D-957E-D7E0AB795B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18CC34E8-9DF2-442D-957E-D7E0AB795B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18CC34E8-9DF2-442D-957E-D7E0AB795B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18CC34E8-9DF2-442D-957E-D7E0AB795B29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{18CC34E8-9DF2-442D-957E-D7E0AB795B29} = {F17266F1-84AF-433A-8F55-CD88A03D8F50}
 	EndGlobalSection
 EndGlobal

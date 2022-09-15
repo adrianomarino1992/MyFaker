@@ -20,7 +20,5 @@ namespace MyFaker.Objects
             Property = prop;
             GetValue = func;
         }
-
-        public object? Run() => GetValue?.Invoke(Data.FakeData.Instance);
     }
 }

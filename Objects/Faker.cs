@@ -34,7 +34,7 @@ namespace MyFaker.Objects
 
             if (_rules.Any(r => r.Property.Equals(info)))
             {
-                throw new Exceptions.RuleAlreadyExistsException(_rules.First(r => r.Property.Equals(info)));
+                throw new Exceptions.RuleAlreadyExistsException(_rules.First(r => _PropertiesMatch(r.Property, info)));
             }
 
             _rules.Add(new Rule(info, func));
@@ -56,13 +56,15 @@ namespace MyFaker.Objects
             if (props == null)
                 return o;
 
+            Data.FakeData faker = new Data.FakeData();
+
             foreach (PropertyInfo? info in props)
             {
-                Rule? r = _rules.FirstOrDefault(s => s.Property.Equals(info));
+                Rule? r = _rules.FirstOrDefault(s => _PropertiesMatch(s.Property, info));
 
                 if (r != null)
                 {
-                    object obj = r.GetValue(Data.FakeData.Instance);
+                    object obj = r.GetValue(faker);
                     
                     try
                     {
@@ -93,6 +95,11 @@ namespace MyFaker.Objects
             }
 
             return l;
+        }
+
+        private bool _PropertiesMatch(PropertyInfo obj1, PropertyInfo obj2)
+        {
+            return obj1.Name == obj2.Name && obj1.PropertyType.Equals(obj2.PropertyType);
         }
     }
 }
