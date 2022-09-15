@@ -9,7 +9,7 @@ namespace MyFaker.Tests.Classes
             AddRule(s => s.CreatedAt, faker => DateTime.Now);
             AddRule(s => s.ModifiedAt, faker => DateTime.Now);
             AddRule(s => s.Name, faker => faker.Person.FullName);
-            AddRule(s => s.Email, faker => faker.Person.Name + "@email.com");
+            AddRule(s => s.Email, faker => faker.Person.Name + "@email.com");            
             AddRule(s => s.Id, faker => 0);
             
         }

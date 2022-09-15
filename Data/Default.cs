@@ -31,7 +31,7 @@ namespace MyFaker.Data
 
                 for (int i = 0; i < l; i++)
                 {
-                    ar.SetValue(GetDefault(type), i);
+                    ar.SetValue(GetDefault(type.GetElementType()), i);
                 }
 
                 return ar;
@@ -52,7 +52,7 @@ namespace MyFaker.Data
 
                 for (int i = 0; i < l; i++)
                 {
-                    ls.Add(GetDefault(type));
+                    ls.Add(GetDefault(type.GetGenericArguments()[0]));
                 }
 
                 return ls;

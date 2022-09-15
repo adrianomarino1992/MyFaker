@@ -13,6 +13,8 @@ namespace MyFaker.Tests.Classes
         public virtual DateTime CreatedAt { get; set; }
 
         public virtual DateTime ModifiedAt { get; set; }
+
+        public virtual List<String> Codes { get; set; } = new List<string>();
     }
 
     public class PersonModel : Person

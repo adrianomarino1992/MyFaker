@@ -8,19 +8,19 @@ MyFaker allow us to generate fake objects based on rules.
 .NET CLI
 
 ```bash
-dotnet add package Adr.MyFaker  --version 1.3.0
+dotnet add package Adr.MyFaker  --version 1.3.1
 ```
 
 Nuget package manager
 
 ```bash
-PM> Install-Package Adr.MyFaker -Version 1.3.0
+PM> Install-Package Adr.MyFaker -Version 1.3.1
 ```
 
 packageReference
 
 ```bash
-<PackageReference Include="Adr.MyFaker " Version="1.3.0" />
+<PackageReference Include="Adr.MyFaker " Version="1.3.1" />
 ```
 
 ## Usage
